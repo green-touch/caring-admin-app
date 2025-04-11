@@ -1,3 +1,21 @@
 {
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@_assets/*": ["./src/assets/*"],
+      "@_axios/*": ["./src/axios/*"],
+      "@_components/*": ["./src/components/*"],
+      "@_hooks/*": ["./src/hooks/*"],
+      "@_layouts/*": ["./src/layouts/*"],
+      "@_pages/*": ["src/pages/*"],
+      "@_services/*": ["./src/services/*"],
+      "@_styles/*": ["./src/styles/*"],
+      "@_types/*": ["./src/types/*"],
+      "@_utils/*": ["./src/utils/*"],
+      "@_zustand/*": ["./src/zustand/*"],
+      "@_store/*": ["./src/store/*"],
+      "@_navigation/*": ["./src/navigation/*"]
+    }
+  },
   "extends": "@tsconfig/react-native/tsconfig.json"
 }
