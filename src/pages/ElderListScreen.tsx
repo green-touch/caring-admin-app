@@ -1,15 +1,23 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, SafeAreaView } from 'react-native'
+import NavigationHeader from '@_components/common/NavigationHeader'
 
-type Props = {}
 
-const ElderListScreen = (props: Props) => {
+const ElderListScreen = ({ navigation }: { navigation: any }) => {
     return (
-        <View>
-            <Text>
-                ElderListScreen
-            </Text>
-        </View>
+        <SafeAreaView className="flex-1 bg-white">
+            <NavigationHeader
+                title="노인 리스트"
+                type="onlyMenu"
+                onMenuPress={() => {
+                    navigation.navigate('Sidebar')
+                }}
+
+            />
+            <View className="flex-1 items-center justify-center">
+                <Text>ElderListScreen</Text>
+            </View>
+        </SafeAreaView>
     )
 }
 

@@ -1,15 +1,21 @@
+import NavigationHeader from '@_components/common/NavigationHeader'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
 
-type Props = {}
-
-const SosListScreen = (props: Props) => {
+const SosListScreen = ({ navigation }: { navigation: any }) => {
     return (
-        <View>
-            <Text>
-                SosListScreen
-            </Text>
-        </View>
+        <SafeAreaView className="flex-1 bg-white">
+            <NavigationHeader
+                title="SOS 요청 리스트"
+                type="onlyMenu"
+                onMenuPress={() => {
+                    navigation.navigate('Sidebar')
+                }}
+            />
+            <View className="flex-1 items-center justify-center">
+                <Text>SosListScreen</Text>
+            </View>
+        </SafeAreaView>
     )
 }
 
