@@ -88,6 +88,7 @@ const NavigationHeader = ({ title, type = 'default', onBackPress, onMenuPress }:
                 // 사이드바에서 사용
                 return (
                     <>
+                         {renderLogo()}
                         {renderCloseButton()}
                     </>
                 );
