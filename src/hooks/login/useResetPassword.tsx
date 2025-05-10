@@ -6,10 +6,29 @@ const validRegex = /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/;
 export function useResetPassword() {
 
     const { navigation, mode } = useLoginNavigation();
+    const [currentPassword, setCurrentPassword] = useState('');
+    const [showCurrentPw, setShowCurrentPw] = useState(false);
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
     const [showPw, setShowPw] = useState(false);
     const [showConfirmPw, setShowConfirmPw] = useState(false);
+
+    const handleCurrentPassword = useCallback((v: string) => {
+        setCurrentPassword(v);
+    }, []);
+
+    const clearCurrentPassword = useCallback(() => {
+        setCurrentPassword('');
+    }, []);
+
+    const toggleCurrentPasswordView = useCallback(() => {
+        setShowCurrentPw((prev) => !prev);
+    }, []);
+
+    const currentPasswordError = useMemo(() => {
+        if (!currentPassword) return '';
+        return '';
+    }, [currentPassword]);
 
     const handlePassword = useCallback((v: string) => {
         setPassword(v);
@@ -57,7 +76,7 @@ export function useResetPassword() {
 
     const handleSubmit = useCallback(() => {
         if (isDisabled) return;
-        navigation.navigate('HelpResult', { mode });
+        navigation.navigate('HelpResult', { mode: 'password' });
     }, [isDisabled]);
 
     return {
@@ -75,5 +94,11 @@ export function useResetPassword() {
         toggleConfirmView,
         isDisabled,
         handleSubmit,
+        currentPassword,
+        showCurrentPw,
+        handleCurrentPassword,
+        clearCurrentPassword,
+        toggleCurrentPasswordView,
+        currentPasswordError,
     };
 }

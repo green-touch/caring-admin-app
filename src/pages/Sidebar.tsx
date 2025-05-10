@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Alert, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Alert, Image, TouchableOpacity, ScrollView } from 'react-native'
 import NavigationHeader from '@_components/common/NavigationHeader'
 import SvgIcon from "@_components/SvgIcon"
 import AddTimelineBtn from '@_components/main/AddTimelineBtn'
@@ -9,13 +9,13 @@ type Props = {
 
 const Sidebar = ({ navigation }: Props) => {
   return (
-    <View className="flex-1 bg-white relative">
+    <ScrollView className="flex-1 bg-white relative">
       <NavigationHeader title="Sidebar" type="withClose" />
 
- 
+
       <View className="absolute top-[230px] left-0 right-0 h-[430px] bg-gray5 z-0" />
 
-      
+
       <View className="bg-white px-4 pt-6 pb-2 z-10">
         <View className="flex-row items-center gap-4 mb-4 ml-">
           <Image
@@ -32,21 +32,21 @@ const Sidebar = ({ navigation }: Props) => {
           </View>
         </View>
 
-       <AddTimelineBtn className='mb-4 mt-2'/>
+        <AddTimelineBtn className='mb-4 mt-2' />
       </View>
 
       <View className="px-4 pt-6 pb-16 space-y-6 z-10">
-      <View
-  className="bg-white rounded-[8px] p-4 space-y-6 mt-5 mx-3"
-  style={{
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 2 },
-    shadowOpacity: 0.0015,
-    shadowRadius: 2,
-    elevation: 0.5,
-  }}
->
-     
+        <View
+          className="bg-white rounded-[8px] p-4 space-y-6 mt-5 mx-3"
+          style={{
+            shadowColor: '#000',
+            shadowOffset: { width: 2, height: 2 },
+            shadowOpacity: 0.0015,
+            shadowRadius: 2,
+            elevation: 0.5,
+          }}
+        >
+
           <View>
             <Text className="text-[17px] font-bold text-gray100 mb-5 mt-6">소속</Text>
             <View className="bg-gray5 rounded-[8px] px-4 py-6">
@@ -69,7 +69,7 @@ const Sidebar = ({ navigation }: Props) => {
             </View>
           </View>
 
-      
+
           <View>
             <Text className="text-[17px] font-bold text-gray100 mb-5 mt-5">이메일</Text>
             <View className="bg-gray5 rounded-[8px] px-4 py-6">
@@ -77,11 +77,11 @@ const Sidebar = ({ navigation }: Props) => {
             </View>
           </View>
 
-        
+
           <TouchableOpacity
             className="flex-row items-center gap-2 pt-2 mt-6 mb-4"
             onPress={() => {
-              Alert.alert('비밀번호 변경', '비밀번호 변경 화면으로 이동합니다.')
+              navigation.navigate('ResetPassword')
             }}
           >
             <Text className="text-[17px] font-bold text-gray100">비밀번호 변경하기</Text>
@@ -90,11 +90,11 @@ const Sidebar = ({ navigation }: Props) => {
         </View>
       </View>
 
-    
+
       <View className="bg-white items-center pt-19 pb-6 z-10 mt-[-12px]">
         <Text className="text-[15px] text-gray50">로그아웃하기</Text>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 
