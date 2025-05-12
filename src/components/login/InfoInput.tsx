@@ -34,7 +34,7 @@ const InfoInput: React.FC<LoginInputProps> = ({
                 secureTextEntry={secureTextEntry}
                 value={value}
                 onChangeText={handleInput}
-                keyboardType="number-pad"
+                keyboardType="default"
             />
 
             {error && (

@@ -3,6 +3,8 @@ export type RootStackParamList = {
   Demo: undefined;
   Main: undefined;
   Sidebar: undefined;
+  ResetPassword: undefined;
+  HelpResult: undefined;
 };
 
 export type MainTabParamList = {
