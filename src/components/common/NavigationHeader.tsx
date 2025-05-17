@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import SvgIcon from '@_components/SvgIcon';
 import { useNavigation } from '@react-navigation/native';
 
-type HeaderType = 'default' | 'withMenu' | 'onlyMenu' | 'withLogo' | 'withClose';
+type HeaderType = 'default' | 'withMenu' | 'onlyMenu' | 'withLogo' | 'withClose' | 'onlyClose';
 
 type HeaderProps = {
     title: string;
@@ -88,7 +88,16 @@ const NavigationHeader = ({ title, type = 'default', onBackPress, onMenuPress }:
                 // 사이드바에서 사용
                 return (
                     <>
-                         {renderLogo()}
+                        {renderLogo()}
+                        {renderCloseButton()}
+                    </>
+                );
+            case 'onlyClose':
+                // 왼쪽 로고 제목 + 오른쪽 닫기
+                // 사이드바에서 사용
+                return (
+                    <>
+                        <View></View>
                         {renderCloseButton()}
                     </>
                 );
