@@ -32,7 +32,7 @@ const Sidebar = ({ navigation }: Props) => {
           </View>
         </View>
 
-        <AddTimelineBtn className='mb-4 mt-2' />
+        <AddTimelineBtn className='mb-4 mt-2' onPress={() => navigation.navigate('timeline')} />
       </View>
 
       <View className="px-4 pt-6 pb-16 space-y-6 z-10">

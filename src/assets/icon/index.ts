@@ -49,3 +49,5 @@ export { default as RadioFocus } from './ic_radio_focus.svg';
 export { default as Refresh } from './ic_refresh.svg';
 export { default as RemoveRound } from './ic_remove_round.svg';
 export { default as Search } from './ic_search.svg';
+export { default as User_On } from './ic_user_on.svg';
+export { default as Remove } from './ic_remove.svg';

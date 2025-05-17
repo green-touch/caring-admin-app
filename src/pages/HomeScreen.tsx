@@ -46,7 +46,7 @@ const HomeScreen = ({ navigation }: { navigation: any }) => {
 
       <View className="flex-1 bg-gray5 px-4">
         <View className="mt-1 mb-4">
-          <AddTimelineButton />
+          <AddTimelineButton onPress={() => navigation.navigate('timeline')} />
         </View>
 
         <View className="flex-1 bg-white rounded-[8px] px-4 pt-6 pb-4 shadow-sm shadow-black/5 mt-10 mx-3">

@@ -1,3 +1,5 @@
+import type { TimelineParams } from '@_types/timeline';
+
 export type RootStackParamList = {
   Login: undefined;
   Demo: undefined;
@@ -5,6 +7,10 @@ export type RootStackParamList = {
   Sidebar: undefined;
   ResetPassword: undefined;
   HelpResult: undefined;
+  timeline: TimelineParams | undefined;
+  'timeline/select/target': undefined;
+  'timeline/select/date': undefined;
+  'timeline/select/location': undefined;
 };
 
 export type MainTabParamList = {
