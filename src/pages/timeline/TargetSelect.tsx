@@ -126,43 +126,20 @@ const TargetSelect = () => {
                             {renderCheck(selectedId === elder.id)}
                         </TouchableOpacity>
                     ))}
-
-                    {target && target.name ? (
-                        <View className="flex-row items-center py-3">
-                            {/* 아바타 */}
-                            {renderAvatar(target.image)}
-                            {/* 정보 */}
-                            <View className="flex-1 ml-4">
-                                <View className="flex-row items-center mb-1">
-                                    <Text className="text-lg font-bold text-gray100 mr-2">{target.name}</Text>
-                                    {target.status && (
-                                        <Text className={`text-sm font-bold ${getStatusColor(target.status)}`}>{target.status}</Text>
-                                    )}
-                                </View>
-                                {target.date && (
-                                    <Text className="text-sm text-gray60">요청 날짜 : {target.date}</Text>
-                                )}
-                            </View>
-                        </View>
-                    ) : (
-                        <View className='w-full bg-gray5 rounded-lg py-6 px-4 mt-4'>
-                            <Text className='text-[15px] w-full text-center font-normal text-[#1D1D1D]'>타임라인 대상이 설정되지 않았습니다</Text>
-                        </View>
-                    )}
                 </ScrollView>
             </View>
             {/* 하단 버튼 고정 */}
             <View className="px-4 py-4 bg-white border-t border-gray10">
                 <TouchableOpacity
                     className="w-full bg-main900 rounded-xl py-4 items-center"
-                    disabled={!!selectedId}
+                    disabled={!selectedId}
                     onPress={handleSubmit}
-                    activeOpacity={!!selectedId ? 1 : 0.8}
+                    activeOpacity={!selectedId ? 1 : 0.8}
                 >
                     <Text className="text-white text-lg font-bold">설정하기</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </View >
     );
 };
 
