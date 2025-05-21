@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, ScrollView, Text, View, TouchableOpacity, Image, Clipboard } from 'react-native'
 import NavigationHeader from '@_components/common/NavigationHeader'
-import SosDetailBottomBar from '@_components/sosdetail/SosdetailBottomBar'
+
 import TimelineListBox from '@_components/sosdetail/Timelinelistbox'
 import EmergencyContactListBox from '@_components/common/EmergencyContactlistbox'
 import ResidenceBox from '@_components/sosdetail/ResidenceBox'
@@ -9,7 +9,7 @@ import CurrentLocationBox from '@_components/sosdetail/currentLocationBox'
 import SosRequestHeader from '@_components/sosdetail/SosRequesHeader'
 import UserInfoCard from '@_components/sosdetail/UserInfoCardEmergency'
 import { MemoList, TimelineData, TimelineItem, ContactItem, ContactList } from '@_types/SosDetail'
-const SosEmergencyDetailScreen = ({ navigation }: { navigation: any }) => {
+const SosEmergencyNoboottom = ({ navigation }: { navigation: any }) => {
     
     const memoList = MemoList
     const userAddress = ['서울특별시 종로구 세종대로23길 희망아파트 A동 B호']
@@ -61,10 +61,8 @@ const SosEmergencyDetailScreen = ({ navigation }: { navigation: any }) => {
 
                 </View>
             </ScrollView>
-
-            <SosDetailBottomBar phoneNumber={'01012345678'} />
         </SafeAreaView>
     )
 }
 
-export default SosEmergencyDetailScreen
+export default SosEmergencyNoboottom

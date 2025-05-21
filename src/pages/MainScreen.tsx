@@ -5,8 +5,7 @@ import { TouchableOpacity } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 
 import SvgIcon from '@_components/SvgIcon';
-
-import ElderListScreen from '@_pages/ElderListScreen';
+import ElderListStack from '@_navigation/ElderListStack';
 import SosListScreen from '@_pages/SosListScreen';
 import HomeScreen from './HomeScreen';
 
@@ -54,17 +53,9 @@ function MainScreen({ navigation }: any): React.JSX.Element {
             />
             <Tab.Screen
                 name="노인 리스트"
-                component={ElderListScreen}
+                component={ElderListStack}
                 options={{
                     headerShown: false,
-                    headerTitleStyle: tw`text-lg`,
-                    headerTitleAlign: 'center',
-                    headerStyle: tw`h-14 border-b border-[#E4E4E4]`,
-                    headerLeft: () => (
-                        <TouchableOpacity onPress={() => navigation.goBack()} className="ml-2">
-                            <SvgIcon name="Back2" size={32} />
-                        </TouchableOpacity>
-                    ),
                     tabBarIcon: ({ focused }) => (
                         <SvgIcon name={focused ? 'ListActive' : 'ListDisabled'} size={32} />
                     ),

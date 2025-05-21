@@ -5,12 +5,12 @@ import SvgIcon from '@_components/SvgIcon'
 import UserAvatarWithStatus from '@_components/main/UserAvatarStatus'
 import InfoRowItem from '@_components/sosdetail/InfoRowItem'
 import SosDetailBottomBar from '@_components/sosdetail/SosdetailBottomBar'
-import SectionGray from '@_components/sosdetail/SectionGray'
+import SectionGray from '@_components/common/SectionGray'
 import TimelineListBox from '@_components/sosdetail/Timelinelistbox'
-import EmergencyContactListBox from '@_components/sosdetail/EmergencyContactlistbox'
+import EmergencyContactListBox from '@_components/common/EmergencyContactlistbox'
 import RequestInfoBox from '@_components/sosdetail/RequestInfo'
 import { MemoList, ContactList, TimelineData, TimelineItem, ContactItem } from '@_types/SosDetail'
-
+import UserCard from '@_components/common/UserCard'
 const SosDetailScreen = ({ navigation }: { navigation: any }) => {
     const timelineData: TimelineItem[] = TimelineData
 
@@ -64,8 +64,6 @@ const SosDetailScreen = ({ navigation }: { navigation: any }) => {
             </ScrollView>
 
             <SosDetailBottomBar phoneNumber={'01012345678'} />
-
-
         </SafeAreaView>
     )
 }
