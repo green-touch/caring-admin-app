@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 interface Props {
   label: string;
-  type: 'status' | 'battery';
+  type: 'status' | 'battery' | 'danger';
 }
 
 const StatusBadge = ({ label, type }: Props) => {
@@ -16,6 +16,10 @@ const StatusBadge = ({ label, type }: Props) => {
       bg: 'bg-yellow50',
       text: 'text-yellow900',
     },
+    danger:{
+      bg:'bg-red50',
+      text:'text-red700',
+    }
   }[type];
 
   return (
