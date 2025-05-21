@@ -14,7 +14,7 @@ const EmergencyContactListBox = ({ contactList }: { contactList: ContactItem[] }
       })
     }
     return (
-   <View className="bg-white rounded-[10px] px-[16px] pt-[24px] pb-[24px] mt-4">
+   <View className="bg-white rounded-[10px] px-[16px] pt-[24px] pb-[24px] mt-4 mx-3">
   <Text className="text-[19px] font-bold text-black mb-10">비상 연락망</Text>
   {contactList.length === 0 ? (
     <View className="w-full bg-gray5 rounded-[10px] px-[16px] py-[24px] items-center justify-center">
