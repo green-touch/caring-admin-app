@@ -35,48 +35,50 @@ const HomeScreen = ({ navigation }: { navigation: any }) => {
             <Text className="font-bold">행복 복지관</Text> 소속
           </Text>
         </View>
-      <View className='px-4'>
-        <View className="w-full py-4">
-          <View className="bg-gray5 rounded-bl-[8px] rounded-br-[8px] px-4 py-3">
-            <View className="flex-row items-center gap-x-1 mb-1">
-              <Text className="text-[21px] leading-[32px] font-bold text-main600">현재 10명</Text>
-              <Text className="text-[21px] leading-[32px] font-medium text-gray90">을 담당 중입니다!</Text>
+        <View className='px-4'>
+          <View className="w-full py-4">
+            <View className="bg-gray5 rounded-bl-[8px] rounded-br-[8px] px-4 py-3">
+              <View className="flex-row items-center gap-x-1 mb-1">
+                <Text className="text-[21px] leading-[32px] font-bold text-main600">현재 10명</Text>
+                <Text className="text-[21px] leading-[32px] font-medium text-gray90">을 담당 중입니다!</Text>
+              </View>
+              <Text className="text-[15px] leading-[23px] text-gray70">나의 네트워크 상태 : 양호</Text>
             </View>
-            <Text className="text-[15px] leading-[23px] text-gray70">나의 네트워크 상태 : 양호</Text>
+          </View>
+
+          <View className="flex-1 bg-gray5 px-4">
+            <View className="mt-1 mb-4">
+              <AddTimelineButton onPress={() => navigation.navigate('timeline')} />
+            </View>
+
+            <View className="bg-white rounded-[8px] px-4 pt-6 pb-4 shadow-sm shadow-black/5 mt-10 mx-3">
+              <Text className="text-base font-bold mb-4 mt-2 text-[18px]">상태 리스트</Text>
+              {userList.map((user, index) => {
+                const imageSource =
+                  index === 0
+                    ? require('@_assets/images/img_user_ex_01.png')
+                    : index === 1
+                      ? require('@_assets/images/img_user_ex_02.png')
+                      : require('@_assets/images/img_user_empty.png')
+
+                return (
+                  <UserStatusListItem
+                    key={index}
+                    imageSource={imageSource}
+                    name={user.name}
+                    connected={user.connected}
+                    status={user.status}
+                    battery={user.battery}
+                    isFirst={index === 0}
+                  />
+                )
+              })}
+            </View>
+
           </View>
         </View>
-
-        <View className="px-4">
-          <AddTimelineButton />
-        </View>
-
-        <View className="bg-white rounded-[8px] px-4 pt-6 pb-4 shadow-sm shadow-black/5 mt-10 mx-3">
-          <Text className="text-base font-bold mb-4 mt-2 text-[18px]">상태 리스트</Text>
-          {userList.map((user, index) => {
-            const imageSource =
-              index === 0
-                ? require('@_assets/images/img_user_ex_01.png')
-                : index === 1
-                  ? require('@_assets/images/img_user_ex_02.png')
-                  : require('@_assets/images/img_user_empty.png')
-
-            return (
-              <UserStatusListItem
-                key={index}
-                imageSource={imageSource}
-                name={user.name}
-                connected={user.connected}
-                status={user.status}
-                battery={user.battery}
-                isFirst={index === 0}
-              />
-            )
-          })}
-        </View>
-
-      </View>
       </ScrollView>
-    
+
     </SafeAreaView>
   )
 }

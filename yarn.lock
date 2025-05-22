@@ -2345,6 +2345,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/datetimepicker@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "@react-native-community/datetimepicker@npm:8.3.0"
+  dependencies:
+    invariant: ^2.2.4
+  peerDependencies:
+    expo: ">=50.0.0"
+    react: "*"
+    react-native: "*"
+    react-native-windows: "*"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+    react-native-windows:
+      optional: true
+  checksum: a25468f54699c2d57c71469e10bcfa0ffcfe9be09cf850783202da8d081d34da38b33088edf5c0fe8e24d0a1320929ce7508d74903213c05c1dc287ac6ecc957
+  languageName: node
+  linkType: hard
+
 "@react-native-community/netinfo@npm:^11.4.1":
   version: 11.4.1
   resolution: "@react-native-community/netinfo@npm:11.4.1"
@@ -6320,6 +6339,7 @@ __metadata:
     "@react-native-community/cli": 15.0.1
     "@react-native-community/cli-platform-android": 15.0.1
     "@react-native-community/cli-platform-ios": 15.0.1
+    "@react-native-community/datetimepicker": ^8.3.0
     "@react-native-community/netinfo": ^11.4.1
     "@react-native/babel-preset": 0.76.5
     "@react-native/eslint-config": 0.76.5
@@ -6351,6 +6371,8 @@ __metadata:
     react: 18.3.1
     react-dom: 18.3.1
     react-native: 0.76.5
+    react-native-calendars: ^1.1312.0
+    react-native-modal-datetime-picker: ^18.0.0
     react-native-reanimated: ^3.16.5
     react-native-safe-area-context: ^5.0.0
     react-native-screens: ^4.10.0
@@ -6482,6 +6504,15 @@ __metadata:
   version: 1.1.0
   resolution: "hex-color-regex@npm:1.1.0"
   checksum: 44fa1b7a26d745012f3bfeeab8015f60514f72d2fcf10dce33068352456b8d71a2e6bc5a17f933ab470da2c5ab1e3e04b05caf3fefe3c1cabd7e02e516fc8784
+  languageName: node
+  linkType: hard
+
+"hoist-non-react-statics@npm:^3.3.1":
+  version: 3.3.2
+  resolution: "hoist-non-react-statics@npm:3.3.2"
+  dependencies:
+    react-is: ^16.7.0
+  checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
   languageName: node
   linkType: hard
 
@@ -8038,7 +8069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:4.0.8, lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
@@ -8066,7 +8097,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -8214,7 +8245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoize-one@npm:^5.0.0":
+"memoize-one@npm:^5.0.0, memoize-one@npm:^5.2.1":
   version: 5.2.1
   resolution: "memoize-one@npm:5.2.1"
   checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
@@ -8676,6 +8707,13 @@ __metadata:
   version: 1.1.0
   resolution: "modern-normalize@npm:1.1.0"
   checksum: edfd40650bd7250eb4761651886a02ca3c524effca41b9832932eab9ccf9f2cfa7e5da8491c7c8bc2d58e1696e5e765adebeaf90cd9d3376444bd6bc0b0f2c99
+  languageName: node
+  linkType: hard
+
+"moment@npm:^2.29.4":
+  version: 2.30.1
+  resolution: "moment@npm:2.30.1"
+  checksum: 859236bab1e88c3e5802afcf797fc801acdbd0ee509d34ea3df6eea21eb6bcc2abd4ae4e4e64aa7c986aa6cba563c6e62806218e6412a765010712e5fa121ba6
   languageName: node
   linkType: hard
 
@@ -9573,7 +9611,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:15.8.1, prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -9692,7 +9730,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.1":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -9703,6 +9741,26 @@ __metadata:
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
   checksum: e20fe84c86ff172fc8d898251b7cc2c43645d108bf96d0b8edf39b98f9a2cae97b40520ee7ed8ee0085ccc94736c4886294456033304151c3f94978cec03df21
+  languageName: node
+  linkType: hard
+
+"react-native-calendars@npm:^1.1312.0":
+  version: 1.1312.0
+  resolution: "react-native-calendars@npm:1.1312.0"
+  dependencies:
+    hoist-non-react-statics: ^3.3.1
+    lodash: ^4.17.15
+    memoize-one: ^5.2.1
+    moment: ^2.29.4
+    prop-types: ^15.5.10
+    react-native-safe-area-context: 4.5.0
+    react-native-swipe-gestures: ^1.0.5
+    recyclerlistview: ^4.0.0
+    xdate: ^0.8.0
+  dependenciesMeta:
+    moment:
+      optional: true
+  checksum: 64cf6ad7827dbb80fd76df2aaab1b937f23758ee3ccbf78733a2a3a375b38d98ba8429a4e1ac962cd9e395a202cc2daef4a13fd42a5e4d334bfe4eeec6634aa8
   languageName: node
   linkType: hard
 
@@ -9730,6 +9788,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-modal-datetime-picker@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "react-native-modal-datetime-picker@npm:18.0.0"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@react-native-community/datetimepicker": ">=6.7.0"
+    react-native: ">=0.65.0"
+  checksum: 30d28a8e599c7a36df4c3e93928aa246087edb95a82a98cb1162b045d18db47447c4e28a89190c83a8258f080066531b2b67805a9aeb007b135d62abfccf8c4c
+  languageName: node
+  linkType: hard
+
 "react-native-reanimated@npm:^3.16.5":
   version: 3.16.5
   resolution: "react-native-reanimated@npm:3.16.5"
@@ -9750,6 +9820,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 29d28dcf99acb2e3928963106a2860d15c9929712832d8d8437fb563691d0199884a63e925548fe5e4b6fc7a9008eadec3e0294b521d9466c875caf16de9c303
+  languageName: node
+  linkType: hard
+
+"react-native-safe-area-context@npm:4.5.0":
+  version: 4.5.0
+  resolution: "react-native-safe-area-context@npm:4.5.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 958df1d20492aa89c23d746f88409a3a3bd1b0d397c80310a4b0bbec9888cbbeb7579c9c92dad46841e2e6536491806206228ba009b7c8af970670aef8273a30
   languageName: node
   linkType: hard
 
@@ -9802,6 +9882,13 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 7bc2d9a5b7ceb66905e358d995bf102d63ce017db40b024d31a6ada03c21733fd3620f9ad867d631b878e2380033ea8777e75c4f654bc5b420ea902695ed9ba8
+  languageName: node
+  linkType: hard
+
+"react-native-swipe-gestures@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "react-native-swipe-gestures@npm:1.0.5"
+  checksum: d637bc40baa50fa0ce3b6cf2b494efeceaea03cc3875cb7cf7d76922914a21d5e6b098d4a084fb291ce61bfbb0a241c03cff24b15bebf0cfae1c146f4ad10d92
   languageName: node
   linkType: hard
 
@@ -9995,6 +10082,20 @@ __metadata:
     source-map: ~0.6.1
     tslib: ^2.0.1
   checksum: 03cc7f57562238ba258d468be67bf7446ce7a707bc87a087891dad15afead46c36e9aaeedf2130e2ab5a465244a9c62bfd4127849761cf8f4085abe2f3e5f485
+  languageName: node
+  linkType: hard
+
+"recyclerlistview@npm:^4.0.0":
+  version: 4.2.3
+  resolution: "recyclerlistview@npm:4.2.3"
+  dependencies:
+    lodash.debounce: 4.0.8
+    prop-types: 15.8.1
+    ts-object-utils: 0.0.5
+  peerDependencies:
+    react: ">= 15.2.1"
+    react-native: ">= 0.30.0"
+  checksum: 847c00bdc7e22178cc20b58b8da215fb2f3f69a4edffd41db97038d0f9eb1475340793e11025f6cc160d3452967ab5724db3896920ba77d2da5208276328254f
   languageName: node
   linkType: hard
 
@@ -11332,6 +11433,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-object-utils@npm:0.0.5":
+  version: 0.0.5
+  resolution: "ts-object-utils@npm:0.0.5"
+  checksum: 83c48fbdaba392fb2c01cea53b267ed5538d2bb44fc6c3eecc10bcfabc1780bfa6ec8569b52bbf0140d9b521d9049d5f15884e12286918244d463d854dbc73cb
+  languageName: node
+  linkType: hard
+
 "tsconfig-paths@npm:^3.15.0":
   version: 3.15.0
   resolution: "tsconfig-paths@npm:3.15.0"
@@ -11883,6 +11991,13 @@ __metadata:
   dependencies:
     chalk: ^4.1.0
   checksum: 36b00ec3c78ddebc0023caeceb68236e31e494d866a521dcee6331a1028662295389bf1e559951f58b4da9fac7be56f0f250a87ce91a24efc8b0d347bbba869e
+  languageName: node
+  linkType: hard
+
+"xdate@npm:^0.8.0":
+  version: 0.8.3
+  resolution: "xdate@npm:0.8.3"
+  checksum: 5fa07921dca6e75ad6ce2945477ed68974ac840d5b446015165aef6afdb000116e07964a4a47ab6ad36f8c398adbcb1e2ba43202e87b6190587672016c214ab7
   languageName: node
   linkType: hard
 

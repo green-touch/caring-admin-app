@@ -52,3 +52,5 @@ export { default as Search } from './ic_search.svg';
 export {default as Battery85Green} from'./ic_battery_85_green.svg'
 export {default as grayWifi} from'./ic_wifi.svg'
 
+export { default as User_On } from './ic_user_on.svg';
+export { default as Remove } from './ic_remove.svg';
