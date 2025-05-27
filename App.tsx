@@ -10,18 +10,15 @@ import Demo from '@_pages/Demo';
 import Sidebar from '@_pages/Sidebar';
 import ResetPassword from '@_pages/ResetPassword';
 import HelpResult from '@_pages/HelpResult';
-<<<<<<< HEAD
 import SosDetailScreen from '@_pages/SosDetail';
 import SosEmergencyDetailScreen from '@_pages/SosEmergencyDetail';
 import UserDetail from '@_pages/ElderDetail';
 import ElderListScreen from '@_pages/ElderListScreen';
-=======
 import Timeline from '@_pages/timeline/Timeline';
 import TargetSelect from '@_pages/timeline/TargetSelect';
 import DateSelect from '@_pages/timeline/DateSelect';
 import LocationSelect from '@_pages/timeline/LocationSelect';
 
->>>>>>> origin/main
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const ListStack = createNativeStackNavigator();
 
@@ -46,7 +43,6 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Demo" component={Demo} />
         <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="User" component={UserDetail} />
         <Stack.Screen name="Elder" component={ElderListStackNavigator}/>
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="HelpResult" component={HelpResult} />
