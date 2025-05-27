@@ -7,6 +7,11 @@ export type RootStackParamList = {
   Sidebar: undefined;
   ResetPassword: undefined;
   HelpResult: undefined;
+  User :undefined;
+  ElderList:undefined;
+  Elder:undefined;
+  SosDetail:undefined;
+  SosEmergency:undefined;
   timeline: TimelineParams | undefined;
   'timeline/select/target': undefined;
   'timeline/select/date': undefined;

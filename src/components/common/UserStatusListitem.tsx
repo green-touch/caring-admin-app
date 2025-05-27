@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import SvgIcon from '@_components/SvgIcon'
 import StatusBadge from '@_components/main/StatusBadge'
-import UserAvatarWithStatus from './UserAvatarStatus'
+import UserAvatarWithStatus from '../main/UserAvatarStatus'
 
 interface Props {
   imageSource: any
@@ -11,6 +11,7 @@ interface Props {
   status: string
   battery: string
   isFirst?: boolean
+  onPress?: () => void // ← 클릭 핸들러
 }
 
 const UserStatusListItem = ({
@@ -20,13 +21,18 @@ const UserStatusListItem = ({
   status,
   battery,
   isFirst = false,
+  onPress,
 }: Props) => {
   return (
-    <View className={`relative ${isFirst ? 'mt-[20px]' : 'mt-[30px]'}`}>
+    <TouchableOpacity
+      onPress={onPress}
+      activeOpacity={0.8}
+      className={`relative ${isFirst ? 'mt-[20px]' : 'mt-[30px]'}`}
+    >
       <View className="flex-row items-start pr-8">
         <UserAvatarWithStatus imageSource={imageSource} connected={connected} />
 
-        <View className="flex-1 ml-4">
+        <View className="flex-1 ml-4 ">
           <View className="flex-row gap-2 items-center">
             <Text className="font-bold text-[15px]">{name}</Text>
             <Text className="text-[12px] text-gray50">{connected ? '접속중' : '미접속'}</Text>
@@ -49,7 +55,7 @@ const UserStatusListItem = ({
       <View className="absolute right-0 top-1/2 -translate-y-1/2">
         <SvgIcon name="ChevronRight" size={32} />
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

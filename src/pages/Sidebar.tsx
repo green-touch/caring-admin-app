@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Alert, Image, TouchableOpacity, ScrollView } from 'react-native'
 import NavigationHeader from '@_components/common/NavigationHeader'
 import SvgIcon from "@_components/SvgIcon"
-import AddTimelineBtn from '@_components/main/AddTimelineBtn'
+import AddTimelineBtn from '@_components/common/AddTimelineBtn'
 type Props = {
   navigation: any
 }
