@@ -29,7 +29,7 @@ function MainScreen({ navigation }: any): React.JSX.Element {
                         </TouchableOpacity>
                     ),
                     tabBarIcon: ({ focused }) => (
-                        <SvgIcon name={focused ? 'AccountActive' : 'AccountDisabled'} size={32} />
+                        <SvgIcon name={focused ? 'BellGrayActive' : 'BellGrayDisabled'} size={32} />
                     ),
                     tabBarStyle: tw`h-16`,
                     tabBarLabelStyle: tw`mt-1 text-sm`,

@@ -6372,6 +6372,7 @@ __metadata:
     react-dom: 18.3.1
     react-native: 0.76.5
     react-native-calendars: ^1.1312.0
+    react-native-circular-progress: ^1.4.1
     react-native-modal-datetime-picker: ^18.0.0
     react-native-reanimated: ^3.16.5
     react-native-safe-area-context: ^5.0.0
@@ -9761,6 +9762,19 @@ __metadata:
     moment:
       optional: true
   checksum: 64cf6ad7827dbb80fd76df2aaab1b937f23758ee3ccbf78733a2a3a375b38d98ba8429a4e1ac962cd9e395a202cc2daef4a13fd42a5e4d334bfe4eeec6634aa8
+  languageName: node
+  linkType: hard
+
+"react-native-circular-progress@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "react-native-circular-progress@npm:1.4.1"
+  dependencies:
+    prop-types: ^15.8.1
+  peerDependencies:
+    react: ">=16.0.0"
+    react-native: ">=0.50.0"
+    react-native-svg: ">=7.0.0"
+  checksum: bc25797a9b82c48452a22152883514080be091c68d635ac406a52b7fc39e2ab0497f1334e067b06e4b72ccff5941afbfc841b3d61164bc50a0d8b13507c27d18
   languageName: node
   linkType: hard
 
